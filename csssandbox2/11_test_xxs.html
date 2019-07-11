@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testing insecure htmll</title>
+</head>
+<body>
+    <!-- <a href="javascript:alert('XSS1')" onmouseover="alert('XSS2')">XSS<a> -->
+    Hello <STYLE>.XSS{background-image:url("javascript:alert('XSS')");}</STYLE><A CLASS=XSS></A>World
+</body>
+</html>
